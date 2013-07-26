@@ -1,0 +1,15 @@
+%h3
+  Создать рассылку
+= form_for @delivery do |f| 
+  %div
+    = label_tag :case, 'Количество получателей'
+    = select_tag :case, options_for_select([["Только 1", 0],['500000', 1]])
+  %div
+    = f.label :subject, 'Заголовок'
+    = f.text_field :subject
+  %div
+    = f.label :body, 'Текст письма'
+    = f.text_area :body
+  %div
+    = f.file_field :attachment
+  = f.submit 'Отправить'

@@ -1,0 +1,20 @@
+common: &common
+  adapter: postgresql
+  encoding: utf8
+  username: <username of database>
+  password: <password for username of database>
+  pool: 5
+  timeout: 5000
+  min_messages: warning
+
+development:
+  <<: *common
+  database: send_mail_test_development
+
+test:
+  <<: *common
+  database: send_mail_test_test
+
+production:
+  <<: *common
+  database: send_mail_test_production

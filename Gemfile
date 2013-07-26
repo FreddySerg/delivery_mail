@@ -12,3 +12,6 @@ end
 gem 'jquery-rails'
 gem 'haml-rails'
 gem 'sidekiq'
+gem 'carrierwave'
+gem "letter_opener", :group => :development
+gem "rmagick"

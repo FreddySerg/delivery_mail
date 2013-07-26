@@ -1,0 +1,15 @@
+%h3
+  Список завершенных рассылок
+= link_to 'Создать новую', new_delivery_path
+- if @deliveries.any?
+  %table
+    %tr
+      %td
+        ID
+      %td
+        Subject
+      %td
+        Attach
+      %td
+        Status
+    = render @deliveries
